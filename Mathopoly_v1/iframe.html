@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+</head>
+
+
+<body>
+
+<iframe id="iframe" src="phpconnect.php"></iframe>
+
+<!--<div id="div" src="phpconnect.php"></div>-->
+
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+
+$(function() {
+    startRefresh();
+}ent_div_id');
+
+function startRefresh() {
+    setTimeout(startRefresh,1000);
+    $.get('phpconnect.php', function(data) {
+        $('#cont).html(data);    
+    });
+}
+
+-->
+
+<script>
+       window.setInterval(function() {
+            reloadIFrame()
+        }, 3000);
+
+        function reloadIFrame() {
+            document.getElementById('iframe').contentWindow.location.reload();
+        }  
+    </script>
+		
+
+</body>
+
+</html>

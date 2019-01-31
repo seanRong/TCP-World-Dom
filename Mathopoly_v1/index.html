@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html> 
+ <!-- only god can save us now
+
+
+ -->
+
+ 
+ 
+ <style>
+body { 
+    background: #000000;
+	color: white;
+}
+* {
+ font-size: 100%;
+ font-family: Courier New;
+ }
+input[type=text] {
+    background-color: black;
+    border: 1px solid #ccc;
+    border-radius: 1px;
+	color: white
+}
+input[type=button]{
+background-color: #000000;
+    border: 1px solid white;
+    color: white;
+}
+</style>
+
+
+TAP anywhere to begin.
+
+<head onclick = funcTAP()>
+</head>
+
+<div id="typewriter"></div>
+
+
+<!-- if you haven't noticed already, only cred1 (in password box) matters!  -->
+
+<body>
+
+<div id="theform" style="visibility: hidden"><form>
+      Username:<input type="text">
+ <br>
+    Password:<input type="text" id="cred1">
+ <input type="button" value="submit" onclick="analyze()">
+  <span id="confirmMessage1" class="confirmMessage1"></span>
+    </form></div>
+
+
+
+
+
+<script>
+window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
+
+document.onclick = initialize;
+
+ var isBodyClicked = false;
+
+function initialize() {
+if(isBodyClicked == false){
+
+function showIt() {
+  document.getElementById("theform").style.visibility = "visible";
+}
+setTimeout(showIt, 17500);                //adjust as needed
+//wierd shit, dont try to fix this. if you want text effects on the main breakout pls wait till i do it
+
+
+var str = "<p>Accessing service host @192.251.226.206...                   <br> WARNING: Do NOT reload page! Your connection will be lost.        <br> Welcome to Breakout_Terminal: <br>Please enter security credentials. </p>  ",
+    i = 0,
+    isTag,
+    text;
+
+(function type() {
+    text = str.slice(0, ++i);
+    if (text === str) return;
+    
+    document.getElementById('typewriter').innerHTML = text;
+
+    var char = text.slice(-1);
+    if( char === '<' ) isTag = true;
+    if( char === '>' ) isTag = false;
+
+    if (isTag) return type();
+    setTimeout(type, 80);
+}());
+}
+isBodyClicked = true;
+
+}
+
+
+
+var cred1 = document.getElementById('cred1');
+var badColor = "#ff6666";
+var message1 = document.getElementById('confirmMessage1');
+function analyze() {
+	if(cred1.value == "almond"){
+		window.location="terminal_almond.html";
+	}
+	else if(cred1.value == "blueberry"){
+		window.location="terminal_blueberry.html";
+	}
+	else if(cred1.value == "campfire"){
+		window.location="terminal_campfire.html";
+	}
+	else if(cred1.value == "destination"){
+		window.location="terminal_destination.html";
+	}
+	else if(cred1.value == "elevate"){
+		window.location="terminal_elevate.html";
+	}
+	else if(cred1.value == "fredericton"){
+		window.location="terminal_fredericton.html";
+	}
+	else if(cred1.value == "ginger"){
+		window.location="terminal_ginger.html";
+	}
+	else if(cred1.value == "humanities"){
+		window.location="terminal_humanities.html";
+	}
+	else if(cred1.value == "inkpad"){
+		window.location="terminal_inkpad.html";
+	}
+	else if(cred1.value == "jugglers"){
+		window.location="terminal_jugglers.html";
+	}
+	else if(cred1.value == "koala"){
+		window.location="terminal_koala.html";
+	}
+	else if(cred1.value == "lobster"){
+		window.location="terminal_lobster.html";
+	}
+	else if(cred1.value == "meatloaf"){
+		window.location="terminal_meatloaf.html";
+	}
+	else if(cred1.value == "nutella"){
+		window.location="terminal_nutella.html";
+	}
+	else if(cred1.value == "oyster"){
+		window.location="terminal_oyster.html";
+	}
+	else if(cred1.value == "phoenix"){
+		window.location="terminal_phoenix.html";
+	}
+	else if(cred1.value == "qwerty"){
+		window.location="terminal_qwerty.html";
+	}
+	else if(cred1.value == "rhubarb"){
+		window.location="terminal_rhubarb.html";
+	}
+	else if(cred1.value == "slingshot"){
+		window.location="terminal_slingshot.html";
+	}
+	else if(cred1.value == "tofino"){
+		window.location="terminal_tofino.html";
+	}
+	else if(cred1.value == "unicorns"){
+		window.location="terminal_unicorns.html";
+	}
+	else if(cred1.value == "value"){
+		window.location="terminal_value.html";
+	}
+	else if(cred1.value == "windpipe"){
+		window.location="terminal_windpipe.html";
+	}
+	else if(cred1.value == "xenophobia"){
+		window.location="terminal_xenophobia.html";
+	}
+	else if(cred1.value == "template"){
+		window.location="terminal_template.html";
+	}
+	
+	else{
+		cred1.style.backgroundColor = badColor;
+		message1.style.color = badColor;
+        message1.innerHTML = "Invalid user password. Check capitalization and try again."
+		}
+}  
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+
+
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <span class="w3-bar-item w3-left">Mathopoly (team identifier?)</span>
+</div>
+
+  <div class="w3-container">
+    <h6>Spacing</h6>
+  </div>
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:30px;">
+
+  <!-- Header -->
+  <header class="w3-container" style="padding-top:22px">
+    <h5><b><i class="fa fa-globe"></i> Current World Status</b></h5>
+  </header>
+
+  <div class="w3-row-padding w3-margin-bottom">
+    <div class="w3">
+
+        <div class="w3-left">
+          <iframe id = "iframe" src = "station1.html" height = "600" width = "1450"></iframe>
+        </div>
+     </div>
+  </div>
+
+  <!-- status?-->
+	<div class="w3-panel w3-pale-red w3-leftbar w3-rightbar w3-border-red w3-margin-right">
+		<p>Updates status on current territory? (currently static)</p>
+	</div>
+
+	<div class="w3-panel w3-pale-green w3-leftbar w3-rightbar w3-border-green w3-margin-right">
+		<p>Current number of territories held? (currently static)</p>
+	</div>
+
+  
+<!-- answer input -->
+  <div class="w3-container">
+    <h5>Country Title Here</h5>
+    <form action="" method="get">
+		Station 1 score: <input type="integer" name="score"><br>
+		Station 2 score: <input type="integer" name="score"><br>
+		<input type="submit">
+	</form><br>
+  </div>
+
+  <!-- End page content -->
+</div>
+
+<!-- reload iframe -->
+<script>
+       window.setInterval(function() {
+            reloadIFrame()
+        }, 3000);
+
+        function reloadIFrame() {
+            document.getElementById('iframe').contentWindow.location.reload();
+        }  
+</script>
+
+
+</body>
+</html>

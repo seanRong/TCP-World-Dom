@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html> 
+ <!-- Current situation: everything is very very messy
+ 
+ TESTING PURPOSES ONLY: answers are easy medium hard-->
+
+ <style>
+body { 
+    background: #000000;
+	color: white;
+}
+* {
+ font-size: 100%;
+ font-family: Courier New;
+ }
+ 
+
+</style>
+
+
+<body  onload='stealth()'>
+
+
+<div id= 'tag1'>
+<span> This is an easy question
+
+    <form>
+    
+		<div>
+            <label for='answer1'>Answer:</label>
+            <input type='value' name='answer1' id='answer1' onkeyup='checkPass1(); return false;'><br>
+            <span id='confirmMessage1' class='confirmMessage1'></span>
+        </div>
+        
+    </form>
+</span>
+</div>
+
+
+
+
+<div id= 'tag2'>
+<form action="score_post.php" onsubmit="" method="post">
+<input class="submit" type="submit" value="Take over" name='take'>
+</form>
+<br>
+<span> This is a medium question
+
+    <form>
+      
+		<div>
+            <label for='answer2'>Answer:</label>
+            <input type='value' name='answer2' id='answer2' onkeyup='checkPass2(); return false;'><br>
+            <span id='confirmMessage2' class='confirmMessage2'></span>
+        </div>
+        
+    </form>
+</span>
+</div>
+
+
+
+<div id= 'tag3'>
+<form action="score_post.php" onsubmit="" method="post">
+<input class="submit" type="submit" value="Take over" name='take'>
+</form><br>
+<span> This is a hard question
+
+    <form>
+      
+		<div>
+            <label for='answer3'>Answer:</label>
+            <input type='value' name='answer3' id='answer3' onkeyup='checkPass3(); return false;'><br>
+            <span id='confirmMessage3' class='confirmMessage3'></span>
+        </div>
+        
+    </form>
+</span>
+</div>
+
+<div id= 'tag4'>
+
+<form action="score_post.php" onsubmit="" method="post">
+<input class="submit" type="submit" value="Take over" name='take'>
+</form>
+
+</div>
+
+
+
+
+<!-- JS stuff is down here -->
+
+<script>
+// at this point, i trust you to know how to troubleshoot this. if it aint broke dont go fixin it
+window.addEventListener('keydown',function(e){if(e.keyIdentifier=='U+000A'||e.keyIdentifier=='Enter'||e.keyCode==13){if(e.target.nodeName=='INPUT'&&e.target.type=='text'){e.preventDefault();return false;}}},true);
+
+    
+
+function stealth() {
+ 
+	var tag2 = document.getElementById('tag2');
+	var tag3 = document.getElementById('tag3');
+	var tag4 = document.getElementById('tag4');
+
+	
+
+	
+	if (tag2.style.display === 'none') {
+        tag2.style.display = 'block';
+    } else {
+        tag2.style.display = 'none';
+    }
+	if (tag3.style.display === 'none') {
+        tag3.style.display = 'block';
+    } else {
+        tag3.style.display = 'none';
+    }
+	if (tag4.style.display === 'none') {
+        tag4.style.display = 'block';
+    } else {
+        tag4.style.display = 'none';
+    }
+	
+	}
+
+
+
+function checkPass1()
+{
+    var message1 = document.getElementById('confirmMessage1');
+    var goodColor = '#66cc66';
+    var badColor = '#ff6666';
+    
+	if(answer1.value == 'easy'){
+		tag2.style.display = 'block';
+		answer1.style.backgroundColor = goodColor;
+		message1.style.color = goodColor;
+        message1.innerHTML = 'That is correct!'		
+	}
+	else{
+		answer1.style.backgroundColor = badColor;
+		}
+}  
+
+function checkPass2()
+{
+    var message2 = document.getElementById('confirmMessage2');
+    var goodColor = '#66cc66';
+    var badColor = '#ff6666';
+    
+	if(answer2.value == 'medium'){
+		tag3.style.display = 'block';
+		answer2.style.backgroundColor = goodColor;
+		message2.style.color = goodColor;
+        message2.innerHTML = 'That is correct!'
+	}
+	else{
+		answer2.style.backgroundColor = badColor;
+		message2.style.color = badColor;
+        message2.innerHTML = 'Incorrect. Please try again.'
+		}
+}  
+
+function checkPass3()
+{
+    var message3 = document.getElementById('confirmMessage3');
+    var goodColor = '#66cc66';
+    var badColor = '#ff6666';
+    
+	if(answer3.value == 'hard'){
+		tag4.style.display = 'block';
+		answer3.style.backgroundColor = goodColor;
+		message3.style.color = goodColor;
+        message3.innerHTML = 'That is correct!'
+	}
+	else{
+		answer3.style.backgroundColor = badColor;
+		message3.style.color = badColor;
+        message3.innerHTML = 'Incorrect. Please try again.'
+		}
+}  
+
+
+</script>
+
+
+
+</body>
+</html>
