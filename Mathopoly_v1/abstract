@@ -1,0 +1,2 @@
+Abstract:
+mySQL table system keeps tracks of scores. Once a team has maxed out a station's score (out of ~20 possible station), that station is locked to other teams and they may not answer. Current points are kept at this point.
