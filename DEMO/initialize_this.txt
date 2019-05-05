@@ -1,0 +1,17 @@
+Set up phpmyadmin database
+Upload the DEMO_progress.sql file, rename to progress.sql
+(If needed, change all values to 0 to reset the game) 
+
+place all image files and the .php file into the same directory
+
+Within the .php,
+Replace instances of 
+
+$servername = "fdb26.awardspace.net";
+$username = "2954727_thedb";
+$password = "admin000";
+$dbname = "2954727_thedb";
+
+with appropriate servername, username/password, and dbname
+
+

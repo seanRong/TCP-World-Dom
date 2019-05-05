@@ -1,5 +1,0 @@
-Set up phpmyadmin database
-Upload the progress.sql file from sample sqls
-If needed, change all values to 0 to reset the game 
-
-Replace instances of 
