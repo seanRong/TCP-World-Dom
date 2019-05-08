@@ -14,4 +14,5 @@ $dbname = "2954727_thedb";
 
 with appropriate servername, username/password, and dbname
 
-
+To test JS verification functionality, you actually have to solve the math problems...
+or alternatively you can look under <script> and cheat for the answers
