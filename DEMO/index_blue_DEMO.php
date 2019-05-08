@@ -1210,7 +1210,8 @@ body {
 </div>
 
 <br><br><br>
-Note: Demo version has half the stations of the original game.
+Note: Demo version has half the stations of the original game. <br>
+<a href= "https://javascriptobfuscator.com/"> I recommend obfuscating the JS code after you set the answers to questions to prevent cheating </a>
 
 <!-- DEMO VERSION CUT
 
