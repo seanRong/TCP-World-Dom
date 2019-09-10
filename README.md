@@ -1,5 +1,7 @@
 # TCP-World-Dom
 
+My first stab at building both the front and the backend... plan to revisit this someday
+
 Files are named "mathopoly" but final version was renamed to "World Domination" before launch
 
 Each team is started on one of the .php pages of differing colors (could easily implement a log in system, which is in reality a redirect, and fuddle the URLs to prevent teams from accidentally using another team's page)
